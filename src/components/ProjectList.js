@@ -1,23 +1,18 @@
-import React, { StrictMode } from "react";
+import React from "react";
 import ProjectItem from "./ProjectItem";
 
 function ProjectList({ projects }) {
   console.log(projects);
   
-  const projectItems = projects.map((project)=>
-    {return(
-      <StrictMode>
-        <ProjectItem key= {project.id} project ={project}/>
-      </StrictMode>
-    )}
-  )
+  const projectItem = projects.map(project=>{return(
+    <ProjectItem key={project.id} project={project}/>)
+  })
   
   return (
     <div id="projects">
       <h2>My Projects</h2>
       <div id="project-list">
-        {projectItems}
-        
+        {projectItem}
       </div>
     </div>
   );
