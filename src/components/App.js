@@ -9,8 +9,8 @@ function App() {
   return (
     <div>
       <NavBar />
-      <Home username={user.name} city={user.city} color={user.color} />
-      <About bio={user.bio} links={user.links} />
+      <Home user={user}/>
+      <About user={user}/>
       <ProjectList projects={user.projects} />
     </div>
   );
